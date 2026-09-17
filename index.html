@@ -11,6 +11,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<!-- Added styling for the new Call button / icon (safe to move into style.css) -->
+<style>
+  .btn-call{
+    display:inline-flex;
+    align-items:center;
+    gap:.5em;
+    background:#0C2236;
+    color:#fff;
+    border:1px solid #0C2236;
+  }
+  .btn-call:hover{ opacity:.9; }
+  .icon-call{ display:inline-flex; }
+  .icon-call svg{ width:18px; height:18px; }
+  .icon-btn-call{
+    background:#0C2236;
+    color:#fff;
+  }
+  .icon-btn-call svg{ width:18px; height:18px; }
+  .header-cta-group{ display:flex; align-items:center; gap:10px; }
+  .advisor-card-links{ flex-wrap:wrap; }
+</style>
 </head>
 <body>
 
@@ -43,16 +65,29 @@
         <li><a href="#questions">Questions</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a class="btn btn-wa nav-cta" href="https://wa.me/971558963834?text=Hello%2C%20I%20would%20like%20advice%20on%20insurance%20cover." target="_blank" rel="noopener">
-        <span class="icon-wa" aria-hidden="true">
-          <svg viewBox="0 0 24 24" role="presentation">
-            <circle class="wa-bubble" cx="12" cy="11.3" r="10.6"/>
-            <path class="wa-bubble" d="M3.2 17 1.3 22.6 7 20.6z"/>
-            <path class="wa-hand" d="M14.3 15.28A4.6 4.6 0 0 1 7.68 9.73" fill="none" stroke-width="2.9" stroke-linecap="round"/>
-          </svg>
-        </span>
-        Chat on WhatsApp
-      </a>
+
+      <div class="header-cta-group">
+        <!-- NEW: Call button -->
+        <a class="btn btn-call nav-cta" href="tel:+971558963834" aria-label="Call Mumtaz Hussain">
+          <span class="icon-call" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="presentation" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 4.2h3.2l1.4 4-2 1.3a11.4 11.4 0 0 0 5.4 5.4l1.3-2 4 1.4v3.2c0 .9-.8 1.6-1.7 1.5C9.3 18.4 5.6 14.7 4.9 8.9 4.8 8 5.5 4.2 4.5 4.2z"/>
+            </svg>
+          </span>
+          Call Now
+        </a>
+
+        <a class="btn btn-wa nav-cta" href="https://wa.me/971558963834?text=Hello%2C%20I%20would%20like%20advice%20on%20insurance%20cover." target="_blank" rel="noopener">
+          <span class="icon-wa" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="presentation">
+              <circle class="wa-bubble" cx="12" cy="11.3" r="10.6"/>
+              <path class="wa-bubble" d="M3.2 17 1.3 22.6 7 20.6z"/>
+              <path class="wa-hand" d="M14.3 15.28A4.6 4.6 0 0 1 7.68 9.73" fill="none" stroke-width="2.9" stroke-linecap="round"/>
+            </svg>
+          </span>
+          Chat on WhatsApp
+        </a>
+      </div>
     </nav>
   </div>
 </header>
@@ -82,6 +117,15 @@
               </svg>
             </span>
             Ask a question on WhatsApp
+          </a>
+          <!-- NEW: Call button -->
+          <a class="btn btn-call btn-lg" href="tel:+971558963834">
+            <span class="icon-call" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="presentation" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.5 4.2h3.2l1.4 4-2 1.3a11.4 11.4 0 0 0 5.4 5.4l1.3-2 4 1.4v3.2c0 .9-.8 1.6-1.7 1.5C9.3 18.4 5.6 14.7 4.9 8.9 4.8 8 5.5 4.2 4.5 4.2z"/>
+              </svg>
+            </span>
+            Call Now
           </a>
           <a class="btn btn-ghost btn-lg" href="#covers">See what I cover</a>
         </div>
@@ -413,6 +457,15 @@
             <p>Sales Manager, Dubai, United Arab Emirates</p>
             <p class="advisor-card-hours">Replies Monday to Saturday, 9am to 9pm (GST)</p>
             <div class="advisor-card-links">
+              <!-- NEW: Call button -->
+              <a class="btn btn-call" href="tel:+971558963834" aria-label="Call Mumtaz Hussain">
+                <span class="icon-call" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4.5 4.2h3.2l1.4 4-2 1.3a11.4 11.4 0 0 0 5.4 5.4l1.3-2 4 1.4v3.2c0 .9-.8 1.6-1.7 1.5C9.3 18.4 5.6 14.7 4.9 8.9 4.8 8 5.5 4.2 4.5 4.2z"/>
+                  </svg>
+                </span>
+                Call
+              </a>
               <a class="btn btn-wa" href="https://wa.me/971558963834?text=Hello%2C%20I%20would%20like%20advice%20on%20insurance%20cover." target="_blank" rel="noopener">
                 <span class="icon-wa" aria-hidden="true">
                   <svg viewBox="0 0 24 24" role="presentation">
@@ -531,6 +584,12 @@
       <h2>Reach me</h2>
       <p>One message is enough. I usually reply within the hour during working hours.</p>
       <div class="footer-icons">
+        <!-- NEW: Call icon -->
+        <a class="icon-btn icon-btn-call" href="tel:+971558963834" aria-label="Call Mumtaz Hussain">
+          <svg viewBox="0 0 24 24" role="presentation" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4.5 4.2h3.2l1.4 4-2 1.3a11.4 11.4 0 0 0 5.4 5.4l1.3-2 4 1.4v3.2c0 .9-.8 1.6-1.7 1.5C9.3 18.4 5.6 14.7 4.9 8.9 4.8 8 5.5 4.2 4.5 4.2z"/>
+          </svg>
+        </a>
         <a class="icon-btn icon-btn-wa" href="https://wa.me/971558963834?text=Hello%2C%20I%20would%20like%20advice%20on%20insurance%20cover." target="_blank" rel="noopener" aria-label="Chat with me on WhatsApp">
           <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true">
             <circle class="wa-bubble" cx="12" cy="11.3" r="10.6"/>
